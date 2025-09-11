@@ -7,7 +7,6 @@ import {
   User2,
   ChevronUp,
   Plus,
-  Projector,
   ChevronDown,
   User,
   LogOut,
@@ -39,7 +38,6 @@ import Image from "next/image";
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuGroup,
   DropdownMenuItem,
 } from "./ui/dropdown-menu";
 import { DropdownMenuTrigger } from "@radix-ui/react-dropdown-menu";
