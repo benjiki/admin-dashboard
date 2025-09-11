@@ -25,6 +25,7 @@ import {
   SidebarGroupLabel,
   SidebarHeader,
   SidebarMenu,
+  SidebarMenuBadge,
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarSeparator,
@@ -104,6 +105,10 @@ const AppsSidebar = () => {
                       <span>{item.title}</span>
                     </a>
                   </SidebarMenuButton>
+
+                  <SidebarMenuBadge>
+                    {["Inbox", "Search"].includes(item.title) ? 34 : 67}
+                  </SidebarMenuBadge>
                 </SidebarMenuItem>
               ))}
             </SidebarMenu>
