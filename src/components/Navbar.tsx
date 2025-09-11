@@ -13,13 +13,18 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "./ui/button";
+import { SidebarTrigger, useSidebar } from "./ui/sidebar";
 
 const Navbar = () => {
   const { setTheme } = useTheme();
+  const { toggleSidebar } = useSidebar();
   return (
     <nav className="p-4 flex items-center justify-between sticky top-0 bg-background z-10">
       {/* left side  */}
-      collabseButton
+      <SidebarTrigger />
+      {/* <Button variant={"outline"} onClick={toggleSidebar}>
+        Custom Button
+      </Button> */}
       {/* right side  */}
       <div className="flex items-center gap-4">
         <Link href={"/"}>Dashboard</Link>
