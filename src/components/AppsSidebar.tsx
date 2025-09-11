@@ -13,6 +13,7 @@ import {
   LogOut,
   PlusCircle,
   ProjectorIcon,
+  Minus,
 } from "lucide-react";
 
 import {
@@ -28,6 +29,9 @@ import {
   SidebarMenuBadge,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarMenuSub,
+  SidebarMenuSubButton,
+  SidebarMenuSubItem,
   SidebarSeparator,
 } from "./ui/sidebar";
 import Link from "next/link";
@@ -178,6 +182,40 @@ const AppsSidebar = () => {
             </CollapsibleContent>
           </SidebarGroup>
         </Collapsible>
+        {/* Nested  */}
+        <SidebarGroup>
+          <SidebarGroupLabel>Nested Items</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link href={"/"}>
+                    <ProjectorIcon />
+                    See all projects
+                  </Link>
+                </SidebarMenuButton>
+                <SidebarMenuSub>
+                  <SidebarMenuSubItem>
+                    <SidebarMenuSubButton asChild>
+                      <Link href={"/"}>
+                        <Plus /> Add Project
+                      </Link>
+                    </SidebarMenuSubButton>
+                  </SidebarMenuSubItem>
+                </SidebarMenuSub>
+                <SidebarMenuSub>
+                  <SidebarMenuSubItem>
+                    <SidebarMenuSubButton asChild>
+                      <Link href={"/"}>
+                        <Minus /> Delete Project
+                      </Link>
+                    </SidebarMenuSubButton>
+                  </SidebarMenuSubItem>
+                </SidebarMenuSub>
+              </SidebarMenuItem>
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
       </SidebarContent>
       <SidebarFooter>
         <SidebarMenu>
