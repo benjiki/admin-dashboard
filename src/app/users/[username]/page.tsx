@@ -14,6 +14,8 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 import { BadgeCheck, Candy, Citrus, Shield } from "lucide-react";
+import { Progress } from "@/components/ui/progress";
+import { Badge } from "@/components/ui/badge";
 const SingleUserPage = () => {
   return (
     <div>
@@ -100,7 +102,40 @@ const SingleUserPage = () => {
             </div>
           </div>
           {/* information container */}
-          <div className="bg-primary-foreground p-4 rounded-lg">Info</div>
+          <div className="bg-primary-foreground p-4  rounded-lg">
+            <h1 className="text-xl font-semibold">User Information</h1>
+            <div className="space-y-4 mt-4">
+              <p className="text-sm text-muted-forground">Profile completion</p>
+              <Progress value={99} />
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="font-bold">UserName:</span>
+              <span>Benjamin</span>
+            </div>
+            <div className="flex item-center gap-2">
+              <span className="font-bold">Email:</span>
+              <span>Benjamin@gmail.com</span>
+            </div>
+            <div className="flex item-center gap-2">
+              <span className="font-bold">Phone:</span>
+              <span>+251924....</span>
+            </div>
+            <div className="flex item-center gap-2">
+              <span className="font-bold">Location:</span>
+              <span>AddisAebea, A.A</span>
+            </div>
+            <div className="flex item-center gap-2">
+              <span className="font-bold">Rolde:</span>
+              <Badge>Admin</Badge>
+            </div>
+            <div className="flex item-center gap-2">
+              <span className="font-bold">UserName:</span>
+              <span>Benjamin</span>
+            </div>
+            <p className="text-sm text-muted-foreground mt-2">
+              Joined on 2025.12.9
+            </p>
+          </div>
           {/* Cart List container */}
           <div className="bg-primary-foreground p-4 rounded-lg">
             <CardList title="Recently Transactions" />
