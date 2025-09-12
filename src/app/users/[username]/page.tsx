@@ -19,6 +19,7 @@ import { Progress } from "@/components/ui/progress";
 import { BadgeCheck, Candy, Citrus, Shield } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import EditUser from "@/components/EditUser";
 
 const SingleUserPage = () => {
   return (
@@ -113,6 +114,7 @@ const SingleUserPage = () => {
                 <SheetTrigger asChild>
                   <Button>Edit User</Button>
                 </SheetTrigger>
+                <EditUser />
               </Sheet>
             </div>
             <div className="space-y-4 mt-4">
