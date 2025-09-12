@@ -228,7 +228,8 @@ const AppsSidebar = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
                 <DropdownMenuItem>
-                  <User className="h-[1.2rem] w-[1.2rem]  " /> Acounts
+                  <User className="h-[1.2rem] w-[1.2rem]  " />
+                  <Link href={"/users/Benjmain"}>Account</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
                   <Settings className="h-[1.2rem] w-[1.2rem]  " /> Settings
