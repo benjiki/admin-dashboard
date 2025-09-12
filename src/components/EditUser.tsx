@@ -14,12 +14,19 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { Input } from "./ui/input";
+import { Button } from "./ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { Input } from "./ui/input";
-import { Button } from "./ui/button";
 
 const formSchema = z.object({
   username: z
@@ -47,6 +54,7 @@ const EditUser = () => {
       username: "benjmain",
       email: "benjmainjoseph@gmail.com",
       phone: "+251924.....",
+      location: "Addis Abeba",
       role: "users",
     },
   });
@@ -122,7 +130,15 @@ const EditUser = () => {
                   <FormItem>
                     <FormLabel>Role</FormLabel>
                     <FormControl>
-                      <Input {...field} />
+                      <Select>
+                        <SelectTrigger className="w-auto">
+                          <SelectValue placeholder="Role" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="admin">Admin</SelectItem>
+                          <SelectItem value="user">User</SelectItem>
+                        </SelectContent>
+                      </Select>
                     </FormControl>
                     <FormDescription>This is your Role.</FormDescription>
                     <FormMessage />
