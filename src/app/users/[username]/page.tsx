@@ -8,6 +8,12 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import CardList from "@/components/CardList";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
+import { BadgeCheck, Candy, Citrus, Shield } from "lucide-react";
 const SingleUserPage = () => {
   return (
     <div>
@@ -31,16 +37,82 @@ const SingleUserPage = () => {
         {/* Left */}
         <div className="w-full xl:w-1/3 space-y-6">
           {/* user badges container */}
-          <div className="bg-primary-foreground p-4 rounded-lg"></div>
+          <div className="bg-primary-foreground p-4 rounded-lg">
+            <h1 className="font-semibold text-xl">User Bages</h1>
+            <div className="flex gap-4 mt-4">
+              <HoverCard>
+                <HoverCardTrigger>
+                  <BadgeCheck
+                    size={36}
+                    className="rounded-full bg-blue-500/30 border-1 border-blue-500/50 p-2"
+                  />
+                </HoverCardTrigger>
+                <HoverCardContent>
+                  <h1 className="font-bold mb-2">Verified User</h1>
+                  <p className="text-sm text-muted-foreground">
+                    This users have been verified by the admin
+                  </p>
+                </HoverCardContent>
+              </HoverCard>
+              <HoverCard>
+                <HoverCardTrigger>
+                  <Shield
+                    size={36}
+                    className="rounded-full bg-green-800/30 border-1 border-green-800/50 p-2"
+                  />
+                </HoverCardTrigger>
+                <HoverCardContent>
+                  <h1 className="font-bold mb-2">Admin</h1>
+                  <p className="text-sm text-muted-foreground">
+                    Admin users have access to all features and can manage
+                    users.
+                  </p>
+                </HoverCardContent>
+              </HoverCard>
+              <HoverCard>
+                <HoverCardTrigger>
+                  <Candy
+                    size={36}
+                    className="rounded-full bg-yellow-500/30 border-1 border-yellow-500/50 p-2"
+                  />
+                </HoverCardTrigger>
+                <HoverCardContent>
+                  <h1 className="font-bold mb-2">Awarded</h1>
+                  <p className="text-sm text-muted-foreground">
+                    This user has been awarded for there contributions.
+                  </p>
+                </HoverCardContent>
+              </HoverCard>
+              <HoverCard>
+                <HoverCardTrigger>
+                  <Citrus
+                    size={36}
+                    className="rounded-full bg-red-500/30 border-1 border-red-500/50 p-2"
+                  />
+                </HoverCardTrigger>
+                <HoverCardContent>
+                  <h1 className="font-bold mb-2">Popular</h1>
+                  <p className="text-sm text-muted-foreground">
+                    This user has been popluar in the comunity.
+                  </p>
+                </HoverCardContent>
+              </HoverCard>
+            </div>
+          </div>
           {/* information container */}
-          <div className="bg-primary-foreground p-4 rounded-lg"></div>
+          <div className="bg-primary-foreground p-4 rounded-lg">Info</div>
           {/* Cart List container */}
           <div className="bg-primary-foreground p-4 rounded-lg">
             <CardList title="Recently Transactions" />
           </div>
         </div>
         {/* Right */}
-        <div className="w-full xl:w-2/3 space-y-6"></div>
+        <div className="w-full xl:w-2/3 space-y-6">
+          {/* User Card Container  */}
+          <div className="bg-primary-foreground p-4 rounded-lg">User Card</div>
+          {/* Chart Container  */}
+          <div className="bg-primary-foreground p-4 rounded-lg">Chart</div>
+        </div>
       </div>
     </div>
   );
