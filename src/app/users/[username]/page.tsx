@@ -20,6 +20,7 @@ import { BadgeCheck, Candy, Citrus, Shield } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import EditUser from "@/components/EditUser";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const SingleUserPage = () => {
   return (
@@ -159,7 +160,21 @@ const SingleUserPage = () => {
         {/* Right */}
         <div className="w-full xl:w-2/3 space-y-6">
           {/* User Card Container  */}
-          <div className="bg-primary-foreground p-4 rounded-lg">User Card</div>
+          <div className="bg-primary-foreground p-4 rounded-lg space-y-2">
+            <div className="flex items-center gap-2">
+              <Avatar className="size-12">
+                <AvatarImage src={"https://github.com/shadcn.png"} />
+                <AvatarFallback>JD</AvatarFallback>
+              </Avatar>
+              <h1 className="text-xl font-semibold ">Benjmain</h1>
+            </div>
+            <p className="text-sm text-muted-foreground">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe
+              cumque numquam nemo quidem nesciunt illum molestias voluptatum
+              animi nihil alias odit laboriosam, fuga officiis doloribus
+              pariatur harum praesentium esse possimus?
+            </p>
+          </div>
           {/* Chart Container  */}
           <div className="bg-primary-foreground p-4 rounded-lg">Chart</div>
         </div>
