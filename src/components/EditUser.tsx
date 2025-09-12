@@ -62,7 +62,7 @@ const EditUser = () => {
     <SheetContent>
       <SheetHeader>
         <SheetTitle className="mb-4">Edit User</SheetTitle>
-        <SheetDescription>
+        <SheetDescription asChild>
           <Form {...form}>
             <form className="space-y-8">
               <FormField
@@ -145,6 +145,9 @@ const EditUser = () => {
                   </FormItem>
                 )}
               />
+              <Button type="submit" variant={"outline"}>
+                Submit
+              </Button>
             </form>
           </Form>
         </SheetDescription>
