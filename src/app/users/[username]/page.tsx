@@ -13,9 +13,20 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import { BadgeCheck, Candy, Citrus, Shield } from "lucide-react";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { Progress } from "@/components/ui/progress";
+
+import { BadgeCheck, Candy, Citrus, Shield } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+
 const SingleUserPage = () => {
   return (
     <div>
@@ -103,7 +114,23 @@ const SingleUserPage = () => {
           </div>
           {/* information container */}
           <div className="bg-primary-foreground p-4  rounded-lg">
-            <h1 className="text-xl font-semibold">User Information</h1>
+            <div className="flex items-center justify-between">
+              <h1 className="text-xl font-semibold">User Information</h1>
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button>Edit User</Button>
+                </SheetTrigger>
+                <SheetContent>
+                  <SheetHeader>
+                    <SheetTitle>Are you absolutely sure?</SheetTitle>
+                    <SheetDescription>
+                      This action cannot be undone. This will permanently delete
+                      your account and remove your data from our servers.
+                    </SheetDescription>
+                  </SheetHeader>
+                </SheetContent>
+              </Sheet>
+            </div>
             <div className="space-y-4 mt-4">
               <p className="text-sm text-muted-forground">Profile completion</p>
               <Progress value={99} />
@@ -139,7 +166,7 @@ const SingleUserPage = () => {
             </p>
           </div>
           {/* Cart List container */}
-          <div className="bg-primary-foreground p-4 rounded-lg">
+          <div className="bg-primary-foreground p-4 mt-4 rounded-lg">
             <CardList title="Recently Transactions" />
           </div>
         </div>
