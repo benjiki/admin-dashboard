@@ -108,29 +108,31 @@ const SingleUserPage = () => {
               <p className="text-sm text-muted-forground">Profile completion</p>
               <Progress value={99} />
             </div>
-            <div className="flex items-center gap-2">
-              <span className="font-bold">UserName:</span>
-              <span>Benjamin</span>
-            </div>
-            <div className="flex item-center gap-2">
-              <span className="font-bold">Email:</span>
-              <span>Benjamin@gmail.com</span>
-            </div>
-            <div className="flex item-center gap-2">
-              <span className="font-bold">Phone:</span>
-              <span>+251924....</span>
-            </div>
-            <div className="flex item-center gap-2">
-              <span className="font-bold">Location:</span>
-              <span>AddisAebea, A.A</span>
-            </div>
-            <div className="flex item-center gap-2">
-              <span className="font-bold">Rolde:</span>
-              <Badge>Admin</Badge>
-            </div>
-            <div className="flex item-center gap-2">
-              <span className="font-bold">UserName:</span>
-              <span>Benjamin</span>
+            <div className="flex flex-col gap-2 mt-2 ">
+              <div className="flex items-center gap-2">
+                <span className="font-bold">UserName:</span>
+                <span>Benjamin</span>
+              </div>
+              <div className="flex item-center gap-2">
+                <span className="font-bold">Email:</span>
+                <span>Benjamin@gmail.com</span>
+              </div>
+              <div className="flex item-center gap-2">
+                <span className="font-bold">Phone:</span>
+                <span>+251924....</span>
+              </div>
+              <div className="flex item-center gap-2">
+                <span className="font-bold">Location:</span>
+                <span>AddisAebea, A.A</span>
+              </div>
+              <div className="flex item-center gap-2">
+                <span className="font-bold">Rolde:</span>
+                <Badge>Admin</Badge>
+              </div>
+              <div className="flex item-center gap-2">
+                <span className="font-bold">UserName:</span>
+                <span>Benjamin</span>
+              </div>
             </div>
             <p className="text-sm text-muted-foreground mt-2">
               Joined on 2025.12.9
